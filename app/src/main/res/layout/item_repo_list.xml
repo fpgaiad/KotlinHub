@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvRepoItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    app:cardBackgroundColor="@color/design_default_color_background">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/civOwnerPhoto"
+        android:layout_width="130dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:scaleType="centerCrop"
+        app:civ_border_color="@color/primaryColor"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvOwnerName"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/ivFork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="4dp"
+        android:paddingTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvForkCount"
+        app:srcCompat="@drawable/ic_fork_border_24"
+        tools:layout_editor_absoluteY="151dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvForkCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/tvOwnerName"
+        android:paddingStart="12dp"
+        app:layout_constraintEnd_toStartOf="@id/ivFork"
+        tools:layout_editor_absoluteY="150dp"
+        tools:text="769" />
+
+    <ImageView
+        android:id="@+id/ivStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="4dp"
+        android:paddingTop="2dp"
+        app:layout_constraintEnd_toStartOf="@id/tvForkCount"
+        app:layout_constraintTop_toTopOf="@id/tvStarCount"
+        app:srcCompat="@drawable/ic_star_border_24"
+        tools:layout_editor_absoluteY="151dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvStarCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/tvOwnerName"
+        app:layout_constraintEnd_toStartOf="@id/ivStar"
+        tools:layout_editor_absoluteY="150dp"
+        tools:text="35034" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOwnerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/primaryColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/civOwnerPhoto"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/civOwnerPhoto"
+        app:layout_constraintTop_toBottomOf="@id/civOwnerPhoto"
+        tools:text="OwnerName" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRepoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/primaryColor"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/civOwnerPhoto"
+        app:layout_constraintTop_toTopOf="@id/civOwnerPhoto"
+        tools:text="NameOfTheRepository" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRepoDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="14dp"
+        android:ellipsize="end"
+        android:maxLines="5"
+        android:textColor="@color/primaryLightColor"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/civOwnerPhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvRepoName"
+        app:layout_constraintTop_toBottomOf="@id/tvRepoName"
+        tools:text="This is a short description about the repository to give the user an overview about what is inside. This could be a much longer description, thus we have to handle this possibility." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
