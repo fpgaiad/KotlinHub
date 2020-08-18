@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">KotlinHub</string>
+    <string name="no_internet_error">No internet connection! Please verify your network!</string>
+    <string name="server_error">A server error occurred! Please try again later.</string>
+    <string name="client_error">Ops! Something went wrong with your network request! Please try again later.</string>
+    <string name="generic_error">Something went wrong! Please try again later.</string>
 </resources>
